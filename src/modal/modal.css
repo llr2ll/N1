@@ -1,0 +1,96 @@
+.show{
+  display: initial;
+}
+.hide{
+  display: none;
+}
+.modal{
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  overflow: auto;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  background: rgba(8, 65, 84, 0.62);
+}
+.modal-card{
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 500px;
+  background:white;
+  align-items: center;
+}
+.close-btn:hover{
+  cursor: pointer;
+}
+.close{
+  position: absolute;
+  right: 0;
+  width: 10%;
+  height: 10%;
+}
+.modal-textblock{
+  display: flex;
+  align-items: center;
+  margin-top: 20%;
+}
+.modal-text{
+  color: #084154;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 35px;
+  text-align: center;
+}
+.modal-line{
+  margin: 0 10px 0 10px;
+  width: 40%;
+  height: 1px;
+  border-bottom: 1px solid #084154;
+}
+.mario{
+  width: 217.11px;
+  height: 279px;
+}
+.card-btn{
+  padding: 15px 80px 15px 80px;
+  background: #3EC6E0;
+  margin: 15px 0 15px 0;
+  border-radius: 5px;
+  color: white;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 21px;
+  text-align: center;
+}
+.card-btn:hover{
+  cursor: pointer;
+  background: #084154;
+}
+.miniMario{
+  position: absolute;
+  top: -15%;
+  right: 0;
+  display: none;
+}
+.card-btn:active + .miniMario{
+  display: initial; 
+}
+
+@media (max-width:400px){
+  .modal-card{width: 300px; height: 400px;}
+  .mario{width: 137.11px; height: 199px;}
+}

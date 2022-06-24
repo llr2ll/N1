@@ -1,0 +1,14 @@
+.Container-home{
+   position: relative;
+   display: flex;
+   margin-bottom: 20%;
+}
+.logo{
+  width: 100%;
+}
+@media(max-width:1440px){.Container-home{margin-bottom: 25%;}}
+@media(max-width:1000px){.Container-home{margin-bottom: 120%;}}
+@media(max-width:768px){.Container-home{margin-bottom: 140%;}}
+@media(max-width:700px){.Container-home{height: 330px; margin-bottom: 150%;}}
+@media(max-width:600px){.Container-home{margin-bottom: 155%;}}
+@media(max-width:425px){.Container-home{margin-bottom: 185%;}}

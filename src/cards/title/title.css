@@ -1,0 +1,29 @@
+.title{
+  display: flex;
+  margin: 0 0 0 15%;
+}
+h1{
+  color: #084154;
+}
+.cube{
+  display: flex;
+  margin: 5px 15px 0 
+}
+.circle{
+    margin: 2px 0 0 2px;
+    background: #3EC6E0;
+    border-radius: 50%;
+    width: 7px;
+    height: 7px;
+}
+.break{
+  flex-basis: 10%;
+  height: 0;
+}
+
+@media (max-width:520px){.title {margin: 0 0 0 5%;}}
+
+@media (max-width:380px){
+  .title{margin: 0 0 0 0%;}
+  .title h1{font-size: 27px; margin-top: 1%;}
+}
