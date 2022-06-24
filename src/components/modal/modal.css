@@ -79,6 +79,7 @@
 .card-btn:hover{
   cursor: pointer;
   background: #084154;
+  content: 'Comprado!';
 }
 .miniMario{
   position: absolute;

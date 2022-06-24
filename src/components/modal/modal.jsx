@@ -8,9 +8,16 @@ import close from '/svgs/close_btn.svg';
 function Modal(){
   
   const [isActive, setIsActive] = React.useState(false);
+  const [verify, setVerify] = React.useState(true);
 
+  let text = 'Comprar';
+  if(verify == false){
+    text = 'Comprado!';
+  }
   function Add(){
+    setVerify(!verify)
     toggle()
+    
   }
   
   function toggle() {
@@ -19,12 +26,12 @@ function Modal(){
   
   return (
     <>
-      <button className='card-btn' onClick={Add}>Comprar</button>
+      <button className='card-btn' onClick={Add}>{text}</button>
       <img className='miniMario' src={miniMario}/>
       <div className={isActive ? 'show' : 'hide'}>
          <div className='modal'>
             <div className='modal-card'>
-                  <button className='close-btn' onClick={toggle}><img className='close' src={close} /></button> 
+                  <button className='close-btn' onClick={Add}><img className='close' src={close} /></button> 
                   <div className='modal-textblock'>
                       <div className='modal-line'></div>
                       <p className='modal-text'>Pedido realizado com sucesso!</p>
