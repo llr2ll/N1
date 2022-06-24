@@ -1,0 +1,107 @@
+.cards{
+ display: flex;
+ justify-content: center;
+ margin: 50px 0 200px;
+}
+.arrow-cards{
+  display: none;
+}
+.card{
+  display: flex;
+  width: 20%;
+  height: 30%;
+  background: white;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 20px 0 20px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 20px 7px rgba(0, 0, 0, 0.07);
+}
+.card h1{
+  text-transform: uppercase;
+  color: #084154;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 1200;
+  font-size: 15px;
+  line-height: 16px;
+  margin: 10px 0 10px 0;
+}
+.card h2{
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 21px;
+  color: #084154;
+}
+.card-img{
+  width: 85%;
+  height: 35%;
+}
+.info{
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  border-top: 3px solid #3EC6E0;
+  border-radius: 5px;
+  align-content: center;
+  width: 100%;
+  background: #F5F5F5;
+}
+.div-btn{
+ position: relative;
+}
+@media (max-width:1500px){.card h1{font-size: 14px;}}
+@media (max-width:1440px){.card{width: 25%; height: 35%;}}
+@media (max-width:1120px){.card h1{font-size: 13px;}}
+@media (max-width:1024px){.card{width: 30%; height: 40%;}}
+
+@media (max-width:850px){
+  .slider-container{display: flex; align-items: center; justify-content: center;}
+  .slider{width: 100%; text-align: center;}
+  .cards {
+    display: flex;
+    overflow-x: scroll;
+    justify-content: flex-start;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    align-items: center;
+  }
+  .arrow-cards{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    align-items: center;
+  }
+  .slide__prev, .slide__next{
+    position: absolute;
+  }
+
+  .slide__prev{
+    left: 0;
+    margin-left: 5%;
+  } 
+  .slide__next{
+    right: 0;
+    margin-right: 5%;
+  }
+
+  .card-arrow{
+    width: 250%;
+  }
+ 
+  .card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin: 10% 10% 10% 13%;
+    box-sizing: border-box;
+    width: 75%;
+    height: 100%;
+  }
+}
+
+@media (max-width:500px){.cards {margin: 50px 0 100px;}}
+@media (max-width:425px){.slide__prev{margin-left: 2%;}}
