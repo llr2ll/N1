@@ -8,6 +8,7 @@ import shopping from '/svgs/shopping-bag-solid.svg';
 import logoRush from '/img/rush.png';
 import hamb from '/svgs/icon_hamburguer.svg';
 import Counter from '../counter/counter';
+import { Link } from "react-router-dom";
 
 function Dropdown() {
 
@@ -27,10 +28,10 @@ function Dropdown() {
                 <div className='dropdown-nav'>
                      <div className='dropdown-nav-left'>
                         <button onClick={toggle} className='dropdown-close'>X</button>
-                        <a href='#'><button className='dropdown-logo'><img className='dropdown-logo-img' src={logoRush}/></button></a>
+                        <Link to="/"><button className='dropdown-logo'><img className='dropdown-logo-img' src={logoRush}/></button></Link>
                      </div>
                       <div className='dropdown-nav-right'>
-                        <button className='btn-right'><img className='nav-icon' src={plane}/><h2>Contato</h2></button>
+                        <Link to="/Contact"><button className='btn-right'><img className='nav-icon' src={plane}/><h2>Contato</h2></button></Link>
                         <button className='btn-right'><img className='nav-icon' src={search}/><h2>Buscar</h2></button>
                         <button className='btn-right'><img className='nav-icon' src={shopping}/></button>
                         <Counter />
@@ -44,6 +45,7 @@ function Dropdown() {
                             </ul>
                         </div>
                       )}
+                      <Link to="/products"><p className='products'>Todos os Produtos</p></Link>
               </div>    
           </div> 
       </div>

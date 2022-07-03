@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 const Content = (props) => {
   return (
@@ -7,7 +8,9 @@ const Content = (props) => {
         props.jsonFilter.content.map((game) => 
             <li key={game.id}>
               <div className='dropdown-btn'>
-                <a href={game.link}>{game.name}</a>
+                <Link to={`/products/${game.id}`} state={game}>
+                  <p>{game.name}</p>
+                </Link>
               </div>
             </li>
         )

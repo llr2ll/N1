@@ -1,15 +1,24 @@
 import React from 'react';
 import './App.css';
-import Home from './components/home/home';
+import Prohibited from './components/prohibited/prohibited';
+import { Routes, Route } from "react-router-dom";
+import Contact from './components/contact/contact';
+import Products from './components/products/products';
+import SingleProduct from './components/products/singleProduct/singleProduct';
 import Footer from './components/footer/footer';
-import Cards from './components/cards/cards';
+import Modal from './components/modal/modal';
 
 function App() {
   return (
     <> 
-      <Home /> 
-      <Cards />
+      <Routes>
+        <Route path="/" element={<Prohibited />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/products/:id" element={<SingleProduct />} />
+      </Routes>
       <Footer />
+      <Modal />
     </>
   );
 }

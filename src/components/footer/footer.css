@@ -1,4 +1,6 @@
 .footer{
+  position: absolute;
+  bottom: 1;
   display: flex;
   width: 100%;
 }

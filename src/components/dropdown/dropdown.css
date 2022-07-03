@@ -50,6 +50,17 @@ li .dropdown-btn:hover{
   border-radius: 5px;
   background: #3EC6E0;
 }
+.products{
+  color: white;
+  position: absolute;
+  display: flex;
+  width: 26%;
+  transform: translate(-115%, 530%);
+}
+
+.products:hover{
+  color: #3EC6E0;
+}
 
 @media (max-width: 1440px) {.dropdown{width: 100%;}}
 @media (max-width: 1400px) {.dropdown-content{transform: translate(7%, 22%);}}
@@ -81,6 +92,7 @@ li .dropdown-btn:hover{
   .dropdown-logo{background:none;}
   .dropdown-logo-img{width:80%; margin-top: 5%;}
   .dropdown-spacer{margin: 10px 0 10px 0; border-bottom: 1px solid #062C38;}
+  .products{transform: translate(-31%, -180%);}
 }
 
 @media (max-width: 600px){

@@ -1,0 +1,46 @@
+.products-nav{
+  background: #084154;
+  width: 100%;
+  height: 10vh;
+}
+.products-div{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+.products-games{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2% 0 2% 0;
+}
+.products-game{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 22%;
+  height: 25%;
+  border-radius: 5px;
+  box-shadow: 0px 4px 20px 7px rgba(0, 0, 0, 0.07);
+}
+
+.products-img{
+  margin: 5%;
+  width: 200px;
+  height: 300px;
+}
+
+.products-name{
+  text-align: center;
+  color: #084154;
+  margin: 2%;
+  font-size: 25px;
+}
+
+@media (max-width: 768px) {
+  .products-games {margin: 10% 0 0 0; flex-direction: column;}
+  .products-game {width: 60%;height: 35%;margin-bottom:5%;}
+}
+
+@media (max-width: 425px) { .products-game {width: 80%;height: 35%;margin-bottom:5%;}}

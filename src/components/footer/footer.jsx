@@ -7,7 +7,7 @@ function Footer() {
     <>
       <div className="footer">
         <div className="footer-left"><img className='logo-footer'src={logo}/></div>
-        <div className="footer-right"><h1>Agência N1 - Todos os direitos reservados</h1></div>
+        <div className="footer-right"><h1>N1 Rush - A melhor loja de jogos </h1></div>
       </div>
     </>
   );

@@ -1,20 +1,21 @@
 import React from 'react';
 import './text.css';
+import {data} from '../data';
+import { useSelector } from 'react-redux';
 
 function Text() {
+  const counter = useSelector(state => state.sidecounter.value);
+  var obj = data[counter]
   return (
     <>
-      <div className='text'>
-        <h1>MORTAL KOMBAT</h1>
-          <div className='price'>
-            <h2>R$299</h2>
-            <h3>,99</h3>
-          </div>
-          <p>Mortal Kombat X combina uma apresentação cinemática única com uma jogabilidade totalmente nova. Os 
-             jogadores podem escolher pela primeira vez diversas variantes de cada personagem, afetando tanto a 
-             estratégia como o estilo de luta.
-          </p>
-      </div>
+        <div className='text'>
+          <h1>{obj.textP}</h1>
+            <div className='price'>
+              <h2>{obj.price}</h2>
+              <h3>{obj.comma}</h3>
+            </div>
+            <p>{obj.textS}</p>
+        </div>
     </>
   );
 }

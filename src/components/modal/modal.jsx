@@ -2,37 +2,30 @@ import React from 'react';
 import './modal.css';
 import Counter from '../counter/counter';
 import mario from '/img/mario.png';
-import miniMario from '/img/miniMario.png';
 import close from '/svgs/close_btn.svg';
+import { useSelector } from 'react-redux';
+import { open } from '../../store/modal';
 import { useDispatch } from 'react-redux';
-import { increment } from '../../store/counter';
 
 function Modal(){
   
   const dispatch = useDispatch()
-  const [isActive, setIsActive] = React.useState(false);
-  const [verify, setVerify] = React.useState(true);
-  let text = 'Comprar';
+  const openModal = useSelector(state => state.modal.value);
+  let arr = []
   
-  if(verify == false){
-    text = 'Comprado!';
+  if(openModal == true){
+    arr.push('show');
+  }else{
+    arr.push('hide')
   }
   
-  function Add(){
-    dispatch(increment())
-    setVerify(!verify)
-    toggle()
-  }
-
   function toggle() {
-    setIsActive(current => !current)
+    dispatch(open())
   }
   
   return (
     <>
-      <button className='card-btn' onClick={Add}>{text}</button>
-      <img className='miniMario' src={miniMario}/>
-      <div className={isActive ? 'show' : 'hide'}>
+      <div className={arr}>
          <div className='modal'>
             <div className='modal-card'>
                   <button className='close-btn' onClick={toggle}><img className='close' src={close} /></button> 

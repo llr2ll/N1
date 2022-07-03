@@ -3,14 +3,19 @@ import './home.css';
 import Nav from '../nav/nav';
 import Text from './text/text';
 import Sidebar from './sidebar/sidebar';
-import Highlights from './highlights/highlights'
-import img from '/img/principal_banner_desktop.jpg';
-
+import Highlights from './highlights/highlights';
+import {data} from './data';
+import { useSelector } from 'react-redux';
+  
 function Home() {
+  const counter = useSelector(state => state.sidecounter.value);
+  var obj = data[counter]
   return (
     <>
       <div className='Container-home'>
-        <img className='logo' src={img}/>
+        <div className='logo'>
+          <img className='logo-img' src={obj.img}/>
+        </div>
         <Nav />
         <Text />
         <Sidebar />
